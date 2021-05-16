@@ -23,24 +23,28 @@
                         password="123456"/>
 
 
-    <javaModelGenerator targetPackage="com.tyy.mybatis.pojo"
+    <javaModelGenerator targetPackage="com.tyy.aop.pojo"
         targetProject="./src/main/java">
         <property name="enableSubPackages" value="false"/>
         <property name="constructorBased" value="true"/>
         <property name="trimSettings" value="true"/>
     </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mapper.xml"
+        <sqlMapGenerator targetPackage="aop.mapper"
                          targetProject="./src/main/resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.tyy.mybatis.mapper"
+        <javaClientGenerator targetPackage="com.tyy.aop.mapper"
                              targetProject="./src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table tableName="student" domainObjectName="Student">
+<!--        <table tableName="student" domainObjectName="Student">-->
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--        </table>-->
+
+        <table tableName="user_operation" domainObjectName="UserOperation">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>
     </context>
