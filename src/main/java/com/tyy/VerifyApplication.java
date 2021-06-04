@@ -7,7 +7,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-@MapperScan("com.tyy.aop.mapper")
+@MapperScan("com.tyy.*.mapper")
 public class VerifyApplication {
 
     public static void main(String[] args) {

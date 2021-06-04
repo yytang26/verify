@@ -18,24 +18,24 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/verify"
+                        connectionURL="jdbc:mysql://localhost:3306/guli"
                         userId="root"
                         password="123456"/>
 
 
-    <javaModelGenerator targetPackage="com.tyy.aop.pojo"
+    <javaModelGenerator targetPackage="com.tyy.page.pojo"
         targetProject="./src/main/java">
         <property name="enableSubPackages" value="false"/>
         <property name="constructorBased" value="true"/>
         <property name="trimSettings" value="true"/>
     </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="aop.mapper"
+        <sqlMapGenerator targetPackage="page.mapper"
                          targetProject="./src/main/resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.tyy.aop.mapper"
+        <javaClientGenerator targetPackage="com.tyy.page.mapper"
                              targetProject="./src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
@@ -44,7 +44,7 @@
 <!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
 <!--        </table>-->
 
-        <table tableName="user_operation" domainObjectName="UserOperation">
+        <table tableName="edu_chapter" domainObjectName="EduChapter">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>
     </context>
